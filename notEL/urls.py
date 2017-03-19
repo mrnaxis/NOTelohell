@@ -6,5 +6,5 @@ urlpatterns = [
     # url(r'^$', 'notEL.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^usuarios/$', include('usuarios.urls')),
+    url(r'^$', include('usuarios.urls')),
 ]
