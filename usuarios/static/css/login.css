@@ -11,6 +11,21 @@
   border: 1px solid #dddddd;
 }
 
+.centralize {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bt_custom {
+  background-color: black;
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 16px;
+  color: white;
+  border: none;
+}
+
 .form-signin h2 {
   position: relative;
 }

@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
 {% block usuario %}
-        <div class="center-block">
-          <div class="form-group">
-            <h2>Registrar</h2>
-            <label for="idnome"></label>
-            <input type="text" name="nome_user" class="form-control" id="idnome" value="" />
-            <label for="idemail"></label>
-            <input type="text" name="email_user" class="form-control" id="idemail" value="" />
-            <label for="idsenha"></label>
-            <input type="password" name="senha_user" class="form-control" id="idsenha" value="" />
-            <label for="idnick"></label>
-            <input type="text" name="nick_user" class="form-control" id="idnick" value="" />
+        <div class="col-md-12">
+          <div class="centralize">
+            <div class="form-group">
+              <h2>Registrar</h2>
+              <label for="idnome">Nome</label>
+              <input type="text" name="nome_user" class="form-control" id="idnome" value="" />
+              <label for="idemail">E-Mail</label>
+              <input type="text" name="email_user" class="form-control" id="idemail" value="" />
+              <label for="idsenha">Senha</label>
+              <input type="password" name="senha_user" class="form-control" id="idsenha" value="" />
+              <label for="idsenha">Confirme a Senha</label>
+              <input type="password" name="senha_user_confirm" class="form-control" id="idsenhaconfirm" value="" />
+              <label for="idnick">Nickname</label>
+              <input type="text" name="nick_user" class="form-control" id="idnick" value="" />
+              <hr />
+              <input type="button" class="bt_custom" name="Registrar-se" value="Registrar-se" />
+            </div>
           </div>
         </div>
 {% endblock usuario %}
