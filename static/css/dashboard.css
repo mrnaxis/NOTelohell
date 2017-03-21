@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+
+.navbar_ {
+  /*Quebra de tamanho para a barra*/
+  width: 100%;
+  height: 10%;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 1px #ccc;
+}

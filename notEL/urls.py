@@ -7,4 +7,5 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^', include('usuarios.urls')),
+    url(r'^dashboard/', include('dashboard.urls')),
 ]

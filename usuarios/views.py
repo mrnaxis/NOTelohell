@@ -6,3 +6,6 @@ def login(request):
 
 def registrar(request): #melhor mudar para uma classe de view?
     return render(request, 'registrar.html')
+
+def usuario(request):
+    return render(request, 'usuario.html')

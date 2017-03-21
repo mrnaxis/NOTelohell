@@ -2,7 +2,8 @@
 {% block usuario %}
         <div class="col-md-12">
           <div class="centralize">
-            <div class="form-group">
+            <div class="form-group"> <!-- tornar form? -->
+              {% csrf_token %}
               <h2>Registrar</h2>
               <label for="idnome">Nome</label>
               <input type="text" name="nome_user" class="form-control" id="idnome" value="" />
@@ -10,7 +11,7 @@
               <input type="text" name="email_user" class="form-control" id="idemail" value="" />
               <label for="idsenha">Senha</label>
               <input type="password" name="senha_user" class="form-control" id="idsenha" value="" />
-              <label for="idsenha">Confirme a Senha</label>
+              <label for="idsenhaconfirm">Confirme a Senha</label>
               <input type="password" name="senha_user_confirm" class="form-control" id="idsenhaconfirm" value="" />
               <label for="idnick">Nickname</label>
               <input type="text" name="nick_user" class="form-control" id="idnick" value="" />

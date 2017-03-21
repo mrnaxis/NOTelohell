@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block usuario %}
+  <div class="row">
+    <div class="text-center">
+      <span class="fa fa-5x fa-user-o"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="centralize">
+        <h4>Nome: </h4>
+        <hr>
+        <h4>E-mail: </h4>
+        <hr>
+        <h4>Senha: **********</h4>
+        <hr>
+        <div class="">
+          <div class="col-xs-12 col-md-3">
+            <input type="button" class="bt_custom" id="id_btsenha" name="" value="Alterar Senha" />
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <input type="button" class="bt_custom" id="id_btdados" name="" value="Alterar Dados de Cadastro" />
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <input type="button" class="bt_custom" id="id_btdesav" name="" value="Desativar Conta D=" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock usuario %}

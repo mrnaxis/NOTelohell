@@ -26,6 +26,14 @@
   border: none;
 }
 
+.bt_custom:hover {
+  background-color: white;
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 16px;
+  color: black;
+  border: none;
+}
+
 .form-signin h2 {
   position: relative;
 }
