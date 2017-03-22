@@ -8,4 +8,4 @@ def dashboard(request):
 
 @login_required
 def get_perfil_logado(request):
-     return request.user.perfil
+     return request.user.usuario
