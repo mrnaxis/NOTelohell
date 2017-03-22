@@ -1,18 +1,28 @@
 {% extends 'base.html' %}
 {% block usuario %}
     <div class="wrapper">
-      <form class="form-signin" action="index.html" method="post">
+      <form class="form-signin" action="{% url 'django.contrib.auth.views.login' %}" method="post">
         <h2 class="form-signin-header">TEST_Login_EloHell</h2>
         <hr />
+        {% csrf_token %}
         <input type="text" class="form-control" placeholder="Username" name="username" value="" />
         <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-        <label class="checkbox">
+        <!--<label class="checkbox">
           <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-        </label>
+        </label> -->
         <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
-      </form>
+        <input type="hidden" name="next" value="{{ next }}">
+
+        {% if form.errors %}
+        <div class="alert alert-danger">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          Por Favor, verifique o E-mail e/ou Senha informados
+        </div>
+        {% endif %}
+
       <div class="form-signin">
         <h6>Não tem cadastro? Clique <a href="{% url 'registrar' %}">Aqui</a></h6>
       </div>
+      </form>
     </div>
 {% endblock usuario %}
