@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from usuarios.forms import RegistrarForm
 from django.views.generic.base import View
 from django.contrib.auth.models import User
+from dashboard.views import get_perfil_logado
 
 # Create your views here.
 class RegistrarView(View):
@@ -24,4 +25,4 @@ def login(request):
     return render(request, 'login.html')
 
 def usuario(request):
-    return render(request, 'usuario.html')
+    return render(request, 'usuario.html',{'perfil' : get_perfil_logado(request)})
