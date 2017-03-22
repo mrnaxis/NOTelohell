@@ -3,7 +3,8 @@ from usuarios import views
 from views import RegistrarView
 
 urlpatterns = patterns ('',
-    url(r'^login/$', views.login, name='login'),
+    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name':'login.html'}, name='login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout_then_login', {'login_url':'/login/'}, name='logout'),
     url(r'^registrar/$', RegistrarView.as_view(), name='registrar'),
     url(r'^usuario/$', views.usuario, name='usuario')
 )
