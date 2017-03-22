@@ -2,21 +2,30 @@
 {% block usuario %}
         <div class="col-md-12">
           <div class="centralize">
-            <div class="form-group"> <!-- tornar form? -->
-              {% csrf_token %}
+            <div class="form-group">
               <h2>Registrar</h2>
+              <form class="" action="{% url 'registrar' %}" method="post">
+              {% csrf_token %}
               <label for="idnome">Nome</label>
-              <input type="text" name="nome_user" class="form-control" id="idnome" value="" />
+              <input type="text" name="nome_user" class="form-control" id="idnome" value="{{form.nome_user.value}}" />
               <label for="idemail">E-Mail</label>
-              <input type="text" name="email_user" class="form-control" id="idemail" value="" />
+              <input type="text" name="email_user" class="form-control" id="idemail" value="{{form.email_user.value}}" />
               <label for="idsenha">Senha</label>
-              <input type="password" name="senha_user" class="form-control" id="idsenha" value="" />
+              <input type="password" name="senha_user" class="form-control" id="idsenha" value="{{form.senha_user.value}}" />
               <label for="idsenhaconfirm">Confirme a Senha</label>
-              <input type="password" name="senha_user_confirm" class="form-control" id="idsenhaconfirm" value="" />
+              <input type="password" name="senha_user_confirm" class="form-control" id="idsenhaconfirm" value="{{form.senha_user_confirm.value}}" />
               <label for="idnick">Nickname</label>
-              <input type="text" name="nick_user" class="form-control" id="idnick" value="" />
+              <input type="text" name="nick_user" class="form-control" id="idnick" value="{{form.nick_user.value}}" />
               <hr />
-              <input type="button" class="bt_custom" name="Registrar-se" value="Registrar-se" />
+              {% if form.errors %}
+                <div class="alert alert-danger">
+                  <button type="button" class="close" name="close_popup">&times;</button>
+                  {{form.non_field_errors}}
+                </div>
+              <hr />
+              {% endif %}
+              <input type="submit" class="bt_custom" name="Registrar-se" value="Registrar-se" />
+              </form>
             </div>
           </div>
         </div>
