@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block usuario %}
+
+<div class="row">
+  <div class="centralize">
+    <form class="form-group" action="index.html" method="post">
+      <h3>Alteração de cadastro</h3>
+      <label for="idnome">Nome</label>
+      <input type="text" id="idnome" name="nome_up" class="form-control" value="" />
+      <label for="idnick">Nick</label>
+      <input type="text" id="idnick" name="nick_up" class="form-control" value="" />
+      <hr />
+      <div class="centralize">
+        <div class="col-md-4">
+          <input type="submit" class="bt_custom" name="" value="Salvar" />
+        </div>
+        <div class="col-md-4">
+          <input type="button" class="bt_custom" name="" value="Cancelar">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock usuario %}

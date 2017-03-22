@@ -25,3 +25,6 @@ def login(request):
 
 def usuario(request):
     return render(request, 'usuario.html')
+
+def usuario_editar(request):
+    return render(request, 'usuario_editar.html')
