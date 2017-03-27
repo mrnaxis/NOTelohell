@@ -18,11 +18,10 @@ class RegistrarForm(forms.Form):
             self.adiciona_erro('Senha nao confere')
             valid = False
 
-        existe_user = User.objects.filter(username=self.data['nome_user']).exists()
         existe_mail = User.objects.filter(username=self.data['email_user']).exists()
 
-        if existe_user or existe_mail:
-            self.adiciona_erro('Usuario ou E-Mail ja Existente')
+        if existe_mail:
+            self.adiciona_erro('E-Mail ja Existente')
             valid = False
 
         return valid
